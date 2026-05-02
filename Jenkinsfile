@@ -36,7 +36,7 @@ pipeline {
             steps {
                 withCredentials([string(credentialsId: 'SONAR_TOKEN', variable: 'SONAR_TOKEN')]) {
                     sh '''
-                    sonar-scanner
+                    /opt/homebrew/bin/sonar-scanner
                     '''
                 }
             }
